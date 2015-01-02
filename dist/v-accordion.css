@@ -93,16 +93,16 @@ body {
 
 
 .bgwhite {
-background: none;
+  background: none;
   border: none;
 }
 
 .Button {
-  background-color: #20A5A5;
+  background-color: rgba(20, 165, 165, 0.6);
 }
 
 .Button:hover{
-  background-color: #20A5A5;
+  background-color: rgba(20, 165, 165, 0.6);
   color: #D04040;
 }
 
@@ -111,7 +111,7 @@ background: none;
 }
 
 .u-h4 {}
-
+  
 .Accordion {
   height: 100%;
   width: 100%; }

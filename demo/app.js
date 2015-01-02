@@ -39,11 +39,15 @@
         },
         {
           header: 'Speaker 2',
-          content: 'Sup I am also a hotshot speaker! Check me out bruh.'
+          content: 'Sup I am also a hotshot speaker, but I am for sure more talented than Speaker 1. Check me out bruh.'
         },
         {
           header: 'Speaker 3',
-          content: 'Sup I am the best speaker by a long shot! Do not even waste your time with Speaker 1 or Speaker 3, because I am the best. Check me out bruh!',
+          content: 'Sup I am also a hotshot speaker, but I am for sure more talented than Speaker 2, and most certainly better than Speaker 1. Check me out bruh.'
+        },
+        {
+          header: 'Speaker 4',
+          content: 'Sup I am the best speaker by a long shot! Do not even waste your time with Speaker 1, 2 or 3, because I am the real deal. Check me out bruh!',
 
           subpanes: [
             {
