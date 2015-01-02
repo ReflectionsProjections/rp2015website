@@ -19,6 +19,26 @@
     </v-pane>
   </v-accordion>
  */
+
+body {
+}
+
+.Button {
+  background-color: #20A5A5;
+  color:;
+}
+
+.Button:hover{
+  background-color: #20A5A5;
+  color: #D04040;
+}
+
+.u-marginTs {
+  color: ;
+}
+
+.u-h4 {}
+
 .Accordion {
   height: 100%;
   width: 100%; }
@@ -67,7 +87,7 @@
     right: 0;
     width: 10px;
     height: 1px;
-    background-color: #2196F3;
+    background-color: #20A5A5;
     -webkit-transform-origin: 50% 50%;
         -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
@@ -78,9 +98,9 @@
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg); }
   .Accordion--dafault .Accordion-paneHeader:hover {
-    color: #2196F3; }
+    color: #20A5A5; }
   .Accordion--dafault .Accordion-paneHeader.is-expanded {
-    border-bottom-color: #2196F3; }
+    border-bottom-color: #20A5A5; }
     .Accordion--dafault .Accordion-paneHeader.is-expanded::after {
       -webkit-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
