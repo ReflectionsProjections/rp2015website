@@ -1,3 +1,6 @@
+
+
+
 (function (angular) {
   'use strict';
 
@@ -32,24 +35,24 @@
       $scope.panes = [
         {
           header: 'Speaker 1',
-          content: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi.'
+          content: 'Sup I am a hotshot speaker! Check me out bruh.'
         },
         {
           header: 'Speaker 2',
-          content: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.'
+          content: 'Sup I am also a hotshot speaker! Check me out bruh.'
         },
         {
           header: 'Speaker 3',
-          content: 'Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non.',
+          content: 'Sup I am the best speaker by a long shot! Do not even waste your time with Speaker 1 or Speaker 3, because I am the best. Check me out bruh!',
 
           subpanes: [
             {
-              header: 'Subpane 1',
-              content: 'Lorem ipsum dolor sit amet enim.'
+              header: "Speaker 3's first cool link",
+              content: 'swag swag swag swag put something here later swag swag'
             },
             {
-              header: 'Subpane 2',
-              content: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Quisque lorem tortor fringilla sed, vestibulum id.'
+              header: "Speaker 3's second cool link",
+              content: 'swag swag swag put something here later as well swag swag'
             }
           ]
         }
