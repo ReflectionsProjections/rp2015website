@@ -231,12 +231,33 @@ svg {
   }
 }
 
-.nav {
-	background-color: #ffffff;
-	border-bottom: 1px solid #D04040;
+img {
+	width: 374px;
+	height: 47px;
 }
 
-img {
-	width: 400px;
-	height: 51px;
+/*I tried; I'm so tired...*/
+.field {
+	z-index: 4;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 120px;
+	width: 250px;
+	height: 300px;
+	border-radius: 10px;
+	background:#9d9d9d;
+	background:rgba(255,255,255,0.5);
+}
+
+form {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+}
+
+input {
+	margin-left: auto;
+	margin-right: auto;
 }
