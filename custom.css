@@ -244,10 +244,9 @@ svg {
 }
 
 img {
-	width: 374px;
-	height: 47px;
 	max-width: 100%;
 	display: block;
+	height: auto;
 }
 
 h2 {
@@ -267,14 +266,15 @@ a {
 	z-index: 4;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 30px;
-	width: 50%;
+	margin-top: 20px;
+	width: 60%;
 	text-align: center;
 	color: #ffffff;
 	font-family: Avenir;
 	background-color: rgba(86,174,174,0.3);
-	margin-bottom: 5%;
 	padding: 5px;
+	max-width: 100%;
+	height: 70%;
 }
 
 .button {
@@ -284,15 +284,17 @@ a {
 	margin-right: 10%;
 	margin-left: 3px;
 	border-radius: 5px;
-	height: 35px;
-	font-size: 15px;
+	font-size: 20px;
+	font-family: Avenir;
 	display: inline;
 	color: #ffffff;
 	float: right;
+	border: none;
+	height: 35px;
 }
 
 .required {
-	background-color: rgba(255,255,255,0.5);
+	background-color: #ffffff;
 	font-size: 30px;
 	padding: 3px;
 	width: 65%;
@@ -301,6 +303,26 @@ a {
 	float: left;
 	margin-left: 10%;
 	border-radius: 5px;
+	height: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+	.required {
+		float: none;
+	}
+	
+	.button {
+		float: none;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 5px;
+	}
+	
+	#mce-EMAIL {
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 .enter {
@@ -340,13 +362,12 @@ input:focus {
 	padding-left: 7px;
 	padding-top: 5px;
 	padding-bottom: 2px;
+	border: none;
 }
 
 .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 3%;
-  width: 561px;
-  height: 70px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3%;
 }
