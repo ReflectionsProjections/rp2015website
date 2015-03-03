@@ -290,7 +290,12 @@ a {
 	color: #ffffff;
 	float: right;
 	border: none;
-	height: 35px;
+	height: 42px;
+	padding-top: 5px;
+}
+
+.button:hover {
+	cursor: pointer;
 }
 
 .required {
@@ -328,6 +333,7 @@ a {
 .enter {
 	z-index: 5;
 	width:100%;
+	margin-top: 50px;
 	/*background: rgba(255,255,255,0.1);*/
 }
 
