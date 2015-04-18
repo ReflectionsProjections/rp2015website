@@ -71,7 +71,11 @@ table{
     $MAIN
 \*------------------------------------*/
 /* GO! */
-
+body
+{
+    display:block;
+    position:relative;
+}
 div.full {
     display:block;
     position:relative;
@@ -83,6 +87,7 @@ border:0;
     margin:0 auto;
     clear: both;
 }
+
 
 div.full img{
     display:block;
@@ -100,7 +105,7 @@ div.full h2
     font-weight: bold;
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 21.4%;
     padding-left: 6.5%;
     padding-right: 6.5%;
     padding-top: 2%;
@@ -124,3 +129,38 @@ div.full h5
     color: #000;
     font-size: 1.6vw;
 }
+
+input[type="email"]
+ {
+     border: 1px solid #d66;
+     position: absolute;
+     top: 80%;
+     left: 23%;
+     width: 41%;
+     height: 5%;
+     padding:0;
+ }
+.blurb
+{
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.8vw;
+    position: absolute;
+    top: 54.55%;
+    left: 23%;
+    max-width: 53%;
+    line-height: 150%;
+}
+ button[type="submit"]
+  {
+      font-family: Ubuntu, sans-serif;
+      border: 1px solid #000;
+      font-weight: bold;
+      font-size: 1.6vw;
+      position: absolute;
+      top: 80%;
+      left: 65.3%;
+      background: #000;
+      color: #fff;
+      height: 5%;
+      width: 14.2%;
+  }
