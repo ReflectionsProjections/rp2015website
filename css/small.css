@@ -177,6 +177,8 @@ div.blurb p
 
 input[type="email"]
  {
+     font-family: Ubuntu, sans-serif;
+     font-size: 2vw;
      border: 1px solid #d66;
      position: absolute;
      top: 80%;
