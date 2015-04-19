@@ -88,6 +88,27 @@ border:0;
     clear: both;
 }
 
+div.full-bottom {
+    display:block;
+    position:relative;
+    width:auto;
+    height:auto;
+    max-width:100%;
+padding:0;
+border:0;
+    margin:0 auto;
+    clear: both;
+}
+
+div.full-bottom img{
+    display:block;
+    width:auto;
+    height:auto;
+    max-width:100%;
+padding:0;
+border:0;
+    margin:0 auto;
+}
 
 div.full img{
     display:block;
@@ -105,7 +126,7 @@ div.full h2
     font-weight: bold;
     position: absolute;
     top: 40%;
-    left: 21.4%;
+    left: 21%;
     padding-left: 6.5%;
     padding-right: 6.5%;
     padding-top: 2%;
@@ -127,7 +148,18 @@ div.full h5
     padding-top: 2%;
     padding-bottom: 2%;
     color: #000;
-    font-size: 1.6vw;
+    font-size: 2vw;
+}
+
+.blurb
+{
+    font-family: Ubuntu, sans-serif;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 59%;
+    left: 22.5%;
+    max-width: 60%;
+    line-height: 150%;
 }
 
 input[type="email"]
@@ -135,32 +167,23 @@ input[type="email"]
      border: 1px solid #d66;
      position: absolute;
      top: 80%;
-     left: 23%;
-     width: 41%;
-     height: 5%;
+     left: 26.5%;
+     width: 50%;
+     height: 7%;
      padding:0;
  }
-.blurb
-{
-    font-family: Ubuntu, sans-serif;
-    font-size: 2.2vw;
-    position: absolute;
-    top: 54.55%;
-    left: 23%;
-    max-width: 53%;
-    line-height: 150%;
-}
+
  button[type="submit"]
   {
       font-family: Ubuntu, sans-serif;
       border: 1px solid #000;
       font-weight: bold;
-      font-size: 1.6vw;
+      font-size: 2.4vw;
       position: absolute;
-      top: 80%;
-      left: 65.3%;
+      top: 90%;
+      left: 45%;
       background: #000;
       color: #fff;
-      height: 5%;
+      height: 7%;
       width: 14.2%;
   }
