@@ -90,7 +90,8 @@ border:0;
 
 div.full-bottom {
     display:block;
-    position:relative;
+    position:absolute;
+    top: 140%;
     width:auto;
     height:auto;
     max-width:100%;
@@ -151,12 +152,24 @@ div.full h5
     font-size: 2vw;
 }
 
-.blurb
+div.blurb {
+    display:block;
+    position:relative;
+    width:auto;
+    height:auto;
+    max-width:100%;
+padding:0;
+border:0;
+    margin:0 auto;
+    clear: both;
+}
+
+div.blurb p
 {
     font-family: Ubuntu, sans-serif;
-    font-size: 3.5vw;
+    font-size: 3vw;
     position: absolute;
-    top: 59%;
+    top: 60%;
     left: 22.5%;
     max-width: 60%;
     line-height: 150%;
