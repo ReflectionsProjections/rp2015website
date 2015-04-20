@@ -155,7 +155,7 @@ input[type="email"]
  {
      font-family: Ubuntu, sans-serif;
      font-size: 1.4vw;
-     border: 1px solid #d66;
+     border: 1px solid #d04040;
      position: absolute;
      top: 80%;
      left: 23%;
@@ -163,7 +163,8 @@ input[type="email"]
      height: 5%;
      padding:0;
  }
-.blurb
+ 
+ div.blurb p
 {
     font-family: Ubuntu, sans-serif;
     font-size: 1.8vw;
