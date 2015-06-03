@@ -115,8 +115,8 @@ div.full img{
     width:auto;
     height:auto;
     max-width:100%;
-padding:0;
-border:0;
+    padding:0;
+    border:0;
     margin:0 auto;
 }
 
@@ -125,7 +125,7 @@ div.full h2
     font-family: Ubuntu, sans-serif;
     font-weight: bold;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 21.4%;
     padding-left: 6.5%;
     padding-right: 6.5%;
@@ -134,6 +134,7 @@ div.full h2
     background: #000;
     color: #fff;
     font-size: 4vw;
+    z-index: 2;
 }
 
 div.full h5
@@ -141,7 +142,7 @@ div.full h5
     font-family: Ubuntu, sans-serif;
     font-weight: bold;
     position: absolute;
-    top: 54%;
+    top: 44%;
     left: 35.7%;
     padding-left: 6.5%;
     padding-right: 6.5%;
@@ -149,6 +150,7 @@ div.full h5
     padding-bottom: 2%;
     color: #000;
     font-size: 1.6vw;
+    z-index: 2;
 }
 
 input[type="email"]
@@ -157,9 +159,9 @@ input[type="email"]
      font-size: 1.4vw;
      border: 1px solid #d04040;
      position: absolute;
-     top: 80%;
+     top: 60%;
      left: 23%;
-     width: 41%;
+     width: 38%;
      height: 5%;
      padding:0;
  }
@@ -167,7 +169,7 @@ input[type="email"]
  div.blurb p
 {
     font-family: Ubuntu, sans-serif;
-    font-size: 1.8vw;
+    font-size: 1.2vw;
     position: absolute;
     top: 54.55%;
     left: 23%;
@@ -199,8 +201,8 @@ div.full-bottom a
       font-weight: bold;
       font-size: 1.6vw;
       position: absolute;
-      top: 80%;
-      left: 65.3%;
+      top: 60%;
+      left: 62.3%;
       background: #000;
       color: #fff;
       height: 5%;

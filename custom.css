@@ -1,3 +1,6 @@
+@font-face { font-family: Avenir; src: url(AvenirLTStd-Medium.otf); }
+@font-face { font-family: Avenir-light; src: url(AvenirLTStd-Light.otf); }
+
 html,
 body {
   background-color: rgb(86,174,174);
@@ -5,20 +8,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-}
-
-@font-face {
-	font-family: Avenir;
-	src: url(AvenirLTStd-Medium.otf);
-}
-
-@font-face {
-	font-family: Avenir-light;
-	src: url(AvenirLTStd-Light.otf);
-}
-
-* {
-  position: relative;
 }
 
 .frame {
@@ -42,7 +31,7 @@ svg {
 .plane-container {
   width: 200px;
   margin: 0px auto;
-  z-index: 3;
+  z-index: -3;
 }
  /*Paper Plane: Image*/
 .plane {
@@ -75,6 +64,8 @@ svg {
 }
 
 .plane {
+    position: relative;
+    z-index: -2;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
@@ -138,15 +129,15 @@ svg {
 }
 
 .cloud.front {
-  z-index: 9;
+  z-index: -9;
 }
 
 .cloud.distant {
-  z-index: 1;
+  z-index: -1;
 }
 
 .cloud.background {
-  z-index: 1;
+  z-index: -1;
 }
 
 /*Cloud Sizing*/
@@ -273,6 +264,10 @@ a {
 	padding: 5px;
 	max-width: 100%;
 	height: 70%;
+}
+
+.field button {
+    
 }
 
 .button {
