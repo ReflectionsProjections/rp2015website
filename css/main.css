@@ -47,12 +47,14 @@ q:before, q:after {
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
-body {
+html, body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  width: 100vw; }
 
 .year {
+  display: none;
   position: absolute;
   top: 0;
   width: 100%; }
@@ -177,7 +179,7 @@ body {
     .text p {
       position: relative;
       top: -100px; } }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-device-width: 800px) {
   .title h1 {
     font-size: 1.6em;
     padding: 24px 30px; }
@@ -189,6 +191,10 @@ body {
     width: 200%; }
 
   #layer-2 {
-    margin-top: 100%; } }
+    transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    position: absolute;
+    right: 0; } }
 
 /*# sourceMappingURL=main.css.map */
