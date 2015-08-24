@@ -1,279 +1,416 @@
-/*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
  */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
  */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
  */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+html, body {
+  font-family: 'Lora', serif;
+  background: url(../img/dot.png); }
+
+h1, h2, h3, h4, h5, h6, nav {
+  font-family: 'Ubuntu', sans-serif;
+  color: #161515; }
 
 hr {
+  border-style: solid;
+  border-bottom: none; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  position: fixed;
+  margin: 20px auto 0;
+  left: 0;
+  right: 0;
+  width: 220px;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  color: #fff; }
+
+h3 {
+  margin: 0; }
+
+nav {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  right: 0;
+  font-weight: 300;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  nav ul {
+    list-style: none;
+    padding: 0; }
+  nav li {
     display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+    margin-bottom: 20px;
+    text-align: right;
+    color: #7a7a7a;
+    cursor: pointer;
+    transition: color 0.2s; }
+  nav a {
+    display: inline-block; }
+  nav a::after {
+    display: inline-block;
+    content: "";
+    margin-left: 16px;
+    margin-right: 60px;
+    height: 10px;
+    width: 10px;
+    background-color: #7a7a7a;
+    transition: background-color 0.2s, width 0.2s, margin-right 0.2s; }
+  nav li:hover, nav li.active {
+    color: #d0d0d0; }
+    nav li:hover a::after, nav li.active a::after {
+      background-color: #d0d0d0;
+      margin-right: 0;
+      width: 70px; }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+section {
+  box-sizing: border-box;
+  min-height: 600px;
+  padding-top: 200px; }
+  section p {
+    color: #514e4e; }
+  section .content {
+    position: relative;
+    z-index: 2;
+    background-color: #fff; }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
+section.home {
+  padding-top: 260px; }
+  section.home h2 {
+    margin-left: 150px;
+    padding-right: 200px;
+    font-weight: 700;
+    font-size: 4em;
+    color: #fff; }
 
-/*
- * Remove default fieldset styles.
- */
+section.about {
+  line-height: 1.4; }
+  section.about .content {
+    padding: 50px 140px 35px 70px;
+    max-width: 625px;
+    margin-left: 150px; }
+  section.about hr {
+    border-color: #d04040;
+    margin: 60px 0 0;
+    width: 200px; }
+  section.about .more {
+    margin: 20px 0 10px;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-size: .8em;
+    font-weight: 400;
+    color: #a5a5a5; }
+  section.about a {
+    font-family: 'Ubuntu', sans-serif;
+    color: #d04040;
+    cursor: pointer;
+    transition: color 0.1s; }
+    section.about a:hover {
+      color: #d68f8f; }
+  section.about .line {
+    position: relative;
+    top: -3px;
+    margin: 0 15px;
+    font-size: .8em;
+    color: #a5a5a5; }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+section.speakers .content {
+  *zoom: 1;
+  padding: 50px 0 35px 70px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 240px; }
+  section.speakers .content:before, section.speakers .content:after {
+    content: '';
+    display: table; }
+  section.speakers .content:after {
+    clear: both; }
+section.speakers figure {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  section.speakers figure:before, section.speakers figure:after {
+    content: '';
+    display: table; }
+  section.speakers figure:after {
+    clear: both; }
+  section.speakers figure:nth-of-type(3n) {
+    margin-right: 0%;
+    float: right; }
+  section.speakers figure:nth-of-type(3n + 1) {
+    clear: both; }
+section.speakers img {
+  width: 100%; }
+section.speakers h4 {
+  font-family: 'Lora';
+  font-weight: normal;
+  margin: 4px 0 0;
+  color: #514e4e; }
 
-/*
- * Allow only vertical resizing of textareas.
- */
+section.schedule .content {
+  *zoom: 1;
+  padding: 50px 40px 30px;
+  max-width: 700px;
+  margin-left: 150px; }
+  section.schedule .content:before, section.schedule .content:after {
+    content: '';
+    display: table; }
+  section.schedule .content:after {
+    clear: both; }
+section.schedule .col {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  section.schedule .col:before, section.schedule .col:after {
+    content: '';
+    display: table; }
+  section.schedule .col:after {
+    clear: both; }
+  section.schedule .col:nth-of-type(2n) {
+    margin-right: 0%;
+    float: right; }
+  section.schedule .col:nth-of-type(2n + 1) {
+    clear: both; }
+section.schedule ul {
+  list-style: none;
+  padding: 0; }
+section.schedule li {
+  border-bottom: 1px solid #d0d0d0;
+  padding: 6px 6px;
+  font-family: 'Lora'; }
+  section.schedule li small {
+    display: inline-block;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    color: #a5a5a5;
+    width: 50px; }
+  section.schedule li span {
+    float: right; }
+section.schedule li:last-child {
+  border: none; }
 
-textarea {
-    resize: vertical;
-}
+section.faq .content {
+  *zoom: 1;
+  padding: 50px 40px 30px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: 240px; }
+  section.faq .content:before, section.faq .content:after {
+    content: '';
+    display: table; }
+  section.faq .content:after {
+    clear: both; }
+section.faq hr {
+  border-color: #d0d0d0; }
+section.faq .questions {
+  *zoom: 1; }
+  section.faq .questions:before, section.faq .questions:after {
+    content: '';
+    display: table; }
+  section.faq .questions:after {
+    clear: both; }
+  section.faq .questions > div {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    section.faq .questions > div:before, section.faq .questions > div:after {
+      content: '';
+      display: table; }
+    section.faq .questions > div:after {
+      clear: both; }
+    section.faq .questions > div:nth-of-type(2n) {
+      margin-right: 0%;
+      float: right; }
+    section.faq .questions > div:nth-of-type(2n + 1) {
+      clear: both; }
+section.faq h4 {
+  margin-bottom: 0; }
+section.faq h5 {
+  margin-bottom: 0; }
+section.faq .address span {
+  display: block;
+  margin-top: 6px;
+  color: #a5a5a5;
+  font-size: .9em; }
+section.faq p {
+  margin-top: 4px;
+  font-size: .9em; }
 
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers:
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
+/*# sourceMappingURL=main.css.map */
