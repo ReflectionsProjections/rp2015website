@@ -12,7 +12,9 @@ $muted-red:   #d68f8f;
 html, body {
 	font-family: 'Lora', serif;
 	background: url(../img/dot.png);
+	overflow: hidden;
 }
+nav {display: none;}
 
 h1, h2, h3, h4, h5, h6, nav {
 	font-family: 'Ubuntu', sans-serif;
@@ -116,6 +118,16 @@ section {
 		z-index: 2;
 
 		background-color: #fff;
+		margin-left: 150px;
+	}
+
+	.right {
+		margin-left: auto;
+		margin-right: 240px;
+	}
+
+	&:last-of-type {
+		padding-bottom: 200px;
 	}
 }
 
@@ -136,9 +148,11 @@ section.about {
 	line-height: 1.4;
 
 	.content {
+		position: relative;
+
 		padding: 50px 140px 35px 70px;
 		max-width: 625px;
-		margin-left: 150px;
+		overflow: hidden;
 	}
 
 	hr {
@@ -160,25 +174,100 @@ section.about {
 		color: $medium-grey;
 	}
 
+	.links {
+		hr {
+			transform: translate(-20px, 0);
+			width: 115%;
+			margin-top: 10px;
+			border-color: $black;
+
+			opacity: 0;
+			transition: opacity .6s;
+		}
+	}
+
+	.close {
+		float: right;
+		position: relative;
+		top: -20px;
+		right: -50px;
+
+		font-family: 'Ubuntu';
+		width: 30px;
+		height: 30px;
+
+		color: $light-grey;
+		border: 2px solid $light-grey;
+		border-radius: 50%;
+
+		background: none;
+		outline: none;
+
+		opacity: 0;
+
+		transition: opacity .6s, color .1s, border-color .1s;
+
+		&:hover {
+			color: $medium-grey;
+			border-color: $medium-grey;
+		}
+	}
+
 	a {
 		font-family: 'Ubuntu', sans-serif;
 		color: $red; 
 		cursor: pointer;
+		padding: 0 15px 10px;
 
 		transition: color 0.1s;
 
 		&:hover {
 			color: $muted-red;
 		}
+
+		&.active {
+			border-bottom: 4px solid $red;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
 	}
 
 	.line {
 		position: relative;
 		top: -3px;
-		margin: 0 15px;
-
 		font-size: .8em;
 		color: $medium-grey;
+	}
+
+	.about-wrapper {
+		opacity: 1;
+		transition: opacity .6s;
+	}
+
+	.about-main {
+		transition: transform .6s ease-in-out;
+
+		&.hidden {
+			transform: translate(0, -90%);
+
+			.about-wrapper {
+				opacity: 0;
+			}
+
+			.links hr, .close {
+				opacity: 1;
+			}
+		}
+	}
+
+	.about-slider {
+		position: absolute;
+		top: 100px;
+
+		list-style: none;
+		padding: 0;
 	}
 }
 
@@ -187,12 +276,10 @@ section.speakers {
 		@include cf();
 		padding: 50px 0 35px 70px;
 		max-width: 600px;
-		margin-left: auto;
-		margin-right: 240px;
 	}
 
 	figure {
-		@include col(1/3, $cycle: 3);
+		@include col(1/3, $cycle: 3, $gutter: 2);
 	}
 
 	img {
@@ -212,7 +299,6 @@ section.schedule {
 		@include cf();
 		padding: 50px 40px 30px;
 		max-width: 700px;
-		margin-left: 150px;
 	}
 
 	.col {
@@ -254,8 +340,7 @@ section.faq {
 		@include cf();
 		padding: 50px 40px 30px;
 		max-width: 650px;
-		margin-left: auto;
-		margin-right: 240px;
+		margin-left: auto
 	}
 
 	hr {
@@ -294,24 +379,42 @@ section.faq {
 	}
 }
 
-.typed-cursor{
+/* taken from Matt Boldt's 'Typed.js' */ 
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
+@keyframes blink {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@-webkit-keyframes blink{
+@-webkit-keyframes blink {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@-moz-keyframes blink{
+@-moz-keyframes blink {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+
+@media only screen and (max-width: 1170px) {
+	nav {
+		display: none;
+	}
+
+	section {
+		.content, &.home h2 {
+			margin-left: 100px;
+		}
+		.right {
+			margin-right: 100px;
+			margin-left: auto;
+		}
+	}
 }

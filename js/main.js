@@ -3,9 +3,9 @@ $('nav a').click(function() {
 	$(this).parent().addClass('active');
 
 	var section = $(this).attr('data-anchor'),
-		top = $('section[data-section="' + section + '"]').offset().top;	
+		top = $('section[data-section="' + section + '"]').offset().top + 50;	
 
-
+	if (section == 'home') top = 0;
 	$('html, body').animate({scrollTop: top}, 500);
 });
 
@@ -19,6 +19,10 @@ $(window).scroll(function() {
         }
     });
 }).scroll();
+
+$('.about-main a').click(function() {
+	$('.about-main').toggleClass('hidden');
+});
 
 var $word = $('.title-text span:first-child');
 
@@ -37,7 +41,7 @@ $('#typed').typed({
 		"a meeting of the minds",
 		"a celebration of computer science",
 		"competing in Mechmania",
-		"INFESTED WITH SPIDERS PLEASE SEND HELP",
+		// "INFESTED WITH SPIDERS PLEASE SEND HELP",
 		"open to everyone",
 		"more than just a conference",
 		"an annual event",

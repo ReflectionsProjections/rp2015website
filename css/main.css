@@ -133,7 +133,11 @@
  */
 html, body {
   font-family: 'Lora', serif;
-  background: url(../img/dot.png); }
+  background: url(../img/dot.png);
+  overflow: hidden; }
+
+nav {
+  display: none; }
 
 h1, h2, h3, h4, h5, h6, nav {
   font-family: 'Ubuntu', sans-serif;
@@ -208,7 +212,13 @@ section {
   section .content {
     position: relative;
     z-index: 2;
-    background-color: #fff; }
+    background-color: #fff;
+    margin-left: 150px; }
+  section .right {
+    margin-left: auto;
+    margin-right: 240px; }
+  section:last-of-type {
+    padding-bottom: 200px; }
 
 section.home {
   padding-top: 260px; }
@@ -222,9 +232,10 @@ section.home {
 section.about {
   line-height: 1.4; }
   section.about .content {
+    position: relative;
     padding: 50px 140px 35px 70px;
     max-width: 625px;
-    margin-left: 150px; }
+    overflow: hidden; }
   section.about hr {
     border-color: #d04040;
     margin: 60px 0 0;
@@ -237,26 +248,69 @@ section.about {
     font-size: .8em;
     font-weight: 400;
     color: #a5a5a5; }
+  section.about .links hr {
+    transform: translate(-20px, 0);
+    width: 115%;
+    margin-top: 10px;
+    border-color: #161515;
+    opacity: 0;
+    transition: opacity .6s; }
+  section.about .close {
+    float: right;
+    position: relative;
+    top: -20px;
+    right: -50px;
+    font-family: 'Ubuntu';
+    width: 30px;
+    height: 30px;
+    color: #d0d0d0;
+    border: 2px solid #d0d0d0;
+    border-radius: 50%;
+    background: none;
+    outline: none;
+    opacity: 0;
+    transition: opacity .6s, color .1s, border-color .1s; }
+    section.about .close:hover {
+      color: #a5a5a5;
+      border-color: #a5a5a5; }
   section.about a {
     font-family: 'Ubuntu', sans-serif;
     color: #d04040;
     cursor: pointer;
+    padding: 0 15px 10px;
     transition: color 0.1s; }
     section.about a:hover {
       color: #d68f8f; }
+    section.about a.active {
+      border-bottom: 4px solid #d04040; }
+    section.about a:first-child {
+      padding-left: 0; }
   section.about .line {
     position: relative;
     top: -3px;
-    margin: 0 15px;
     font-size: .8em;
     color: #a5a5a5; }
+  section.about .about-wrapper {
+    opacity: 1;
+    transition: opacity .6s; }
+  section.about .about-main {
+    transition: transform .6s ease-in-out; }
+    section.about .about-main.hidden {
+      transform: translate(0, -90%); }
+      section.about .about-main.hidden .about-wrapper {
+        opacity: 0; }
+      section.about .about-main.hidden .links hr, section.about .about-main.hidden .close {
+        opacity: 1; }
+  section.about .about-slider {
+    position: absolute;
+    top: 100px;
+    list-style: none;
+    padding: 0; }
 
 section.speakers .content {
   *zoom: 1;
   padding: 50px 0 35px 70px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: 240px; }
+  max-width: 600px; }
   section.speakers .content:before, section.speakers .content:after {
     content: '';
     display: table; }
@@ -267,9 +321,9 @@ section.speakers figure {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 31.33333%;
+  width: 32.0%;
   margin-left: 0%;
-  margin-right: 3%; }
+  margin-right: 2%; }
   section.speakers figure:before, section.speakers figure:after {
     content: '';
     display: table; }
@@ -291,8 +345,7 @@ section.speakers h4 {
 section.schedule .content {
   *zoom: 1;
   padding: 50px 40px 30px;
-  max-width: 700px;
-  margin-left: 150px; }
+  max-width: 700px; }
   section.schedule .content:before, section.schedule .content:after {
     content: '';
     display: table; }
@@ -338,8 +391,7 @@ section.faq .content {
   *zoom: 1;
   padding: 50px 40px 30px;
   max-width: 650px;
-  margin-left: auto;
-  margin-right: 240px; }
+  margin-left: auto; }
   section.faq .content:before, section.faq .content:after {
     content: '';
     display: table; }
@@ -385,6 +437,7 @@ section.faq p {
   margin-top: 4px;
   font-size: .9em; }
 
+/* taken from Matt Boldt's 'Typed.js' */
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
@@ -412,5 +465,14 @@ section.faq p {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@media only screen and (max-width: 1170px) {
+  nav {
+    display: none; }
+
+  section .content, section.home h2 {
+    margin-left: 100px; }
+  section .right {
+    margin-right: 100px;
+    margin-left: auto; } }
 
 /*# sourceMappingURL=main.css.map */
