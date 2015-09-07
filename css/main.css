@@ -182,6 +182,7 @@ nav#desktop-nav {
   -ms-transform: translate(0, -50%);
   -moz-transform: translate(0, -50%);
   right: 0;
+  z-index: 5;
   font-weight: 300;
   font-size: .8em;
   text-transform: uppercase;
@@ -431,7 +432,7 @@ section.schedule ul {
   padding: 0; }
 section.schedule li {
   border-bottom: 1px solid #d0d0d0;
-  padding: 6px 6px;
+  padding: 10px 6px;
   font-family: 'Lora'; }
   section.schedule li small {
     display: inline-block;

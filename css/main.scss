@@ -68,6 +68,7 @@ nav#desktop-nav {
 	-ms-transform: translate(0, -50%);
 	-moz-transform: translate(0, -50%);
 	right: 0;
+	z-index: 5;
 
 	font: { weight: 300; size: .8em; }
 	text: { transform: uppercase; }
@@ -368,7 +369,7 @@ section.schedule {
 
 	li {
 		border-bottom: 1px solid $light-grey;
-		padding: 6px 6px;
+		padding: 10px 6px;
 
 		font-family: 'Lora';
 
