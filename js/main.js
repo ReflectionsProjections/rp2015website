@@ -14,8 +14,10 @@ $(window).scroll(function() {
 
     $('body > section').each(function(i) {
         if ($(this).position().top <= windscroll) {
+        	var section = $(this).attr('data-section');
+
             $('nav li.active').removeClass('active');
-            $('nav li').eq(i).addClass('active');
+            $('nav li a[data-anchor="' + section + '"]').parent().addClass('active');
         }
     });
 }).scroll();
