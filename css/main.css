@@ -133,11 +133,7 @@
  */
 html, body {
   font-family: 'Lora', serif;
-  background: url(../img/dot.png);
-  overflow: hidden; }
-
-nav {
-  display: none; }
+  background: url(../img/dot.png); }
 
 h1, h2, h3, h4, h5, h6, nav {
   font-family: 'Ubuntu', sans-serif;
@@ -164,7 +160,7 @@ h1 {
 h3 {
   margin: 0; }
 
-nav {
+nav#desktop-nav {
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
@@ -175,19 +171,19 @@ nav {
   font-size: .8em;
   text-transform: uppercase;
   letter-spacing: 1px; }
-  nav ul {
+  nav#desktop-nav ul {
     list-style: none;
     padding: 0; }
-  nav li {
+  nav#desktop-nav li {
     display: block;
     margin-bottom: 20px;
     text-align: right;
     color: #7a7a7a;
     cursor: pointer;
     transition: color 0.2s; }
-  nav a {
+  nav#desktop-nav a {
     display: inline-block; }
-  nav a::after {
+  nav#desktop-nav a::after {
     display: inline-block;
     content: "";
     margin-left: 16px;
@@ -196,16 +192,59 @@ nav {
     width: 10px;
     background-color: #7a7a7a;
     transition: background-color 0.2s, width 0.2s, margin-right 0.2s; }
-  nav li:hover, nav li.active {
+  nav#desktop-nav li:hover, nav#desktop-nav li.active {
     color: #d0d0d0; }
-    nav li:hover a::after, nav li.active a::after {
+    nav#desktop-nav li:hover a::after, nav#desktop-nav li.active a::after {
       background-color: #d0d0d0;
       margin-right: 0;
       width: 70px; }
 
+nav#mobile-nav {
+  display: none;
+  z-index: 5;
+  *zoom: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0c2231;
+  border-bottom: 2px solid #d0d0d0;
+  color: #7a7a7a;
+  font-weight: 300;
+  font-size: .9em;
+  text-transform: uppercase; }
+  nav#mobile-nav:before, nav#mobile-nav:after {
+    content: '';
+    display: table; }
+  nav#mobile-nav:after {
+    clear: both; }
+  nav#mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; }
+  nav#mobile-nav li {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: 0%;
+    transition: .1s color;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    cursor: pointer; }
+    nav#mobile-nav li:before, nav#mobile-nav li:after {
+      content: '';
+      display: table; }
+    nav#mobile-nav li:after {
+      clear: both; }
+  nav#mobile-nav li:hover, nav#mobile-nav li.active {
+    color: #d0d0d0;
+    border-bottom: 6px solid #d0d0d0; }
+
 section {
   box-sizing: border-box;
-  min-height: 600px;
   padding-top: 200px; }
   section p {
     color: #514e4e; }
@@ -221,6 +260,7 @@ section {
     padding-bottom: 200px; }
 
 section.home {
+  min-height: 600px;
   padding-top: 260px; }
   section.home h2 {
     margin-left: 150px;
@@ -383,6 +423,7 @@ section.schedule li {
     color: #a5a5a5;
     width: 50px; }
   section.schedule li span {
+    display: none;
     float: right; }
 section.schedule li:last-child {
   border: none; }
@@ -428,11 +469,13 @@ section.faq h4 {
   margin-bottom: 0; }
 section.faq h5 {
   margin-bottom: 0; }
-section.faq .address span {
+section.faq .address a {
   display: block;
   margin-top: 6px;
   color: #a5a5a5;
   font-size: .9em; }
+  section.faq .address a:hover {
+    text-decoration: underline; }
 section.faq p {
   margin-top: 4px;
   font-size: .9em; }
@@ -466,7 +509,7 @@ section.faq p {
   100% {
     opacity: 1; } }
 @media only screen and (max-width: 1170px) {
-  nav {
+  nav#desktop-nav {
     display: none; }
 
   section .content, section.home h2 {
@@ -474,5 +517,59 @@ section.faq p {
   section .right {
     margin-right: 100px;
     margin-left: auto; } }
+@media only screen and (max-width: 950px) {
+  section.home h2 {
+    font-size: 2.8em; } }
+@media only screen and (max-width: 950px) {
+  nav#mobile-nav {
+    display: block; }
+
+  h1 {
+    position: absolute;
+    top: 60px; }
+
+  section {
+    padding: 10px 10px 0px; }
+    section .content {
+      margin: 0;
+      max-width: 100% !important; }
+    section:last-of-type {
+      padding-bottom: 10px; }
+
+  section.home {
+    padding: 260px 20px 0; }
+    section.home h2 {
+      margin: 0;
+      padding: 0; } }
+@media only screen and (max-width: 700px) {
+  section .content {
+    padding: 30px 20px !important; } }
+@media only screen and (max-width: 600px) {
+  section.home h2 {
+    font-size: 2.5em; }
+
+  section.schedule .col {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    section.schedule .col:first-child {
+      margin-left: auto; }
+    section.schedule .col:last-child {
+      margin-right: auto; }
+
+  section.faq .questions > div {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    section.faq .questions > div:first-child {
+      margin-left: auto; }
+    section.faq .questions > div:last-child {
+      margin-right: auto; } }
 
 /*# sourceMappingURL=main.css.map */

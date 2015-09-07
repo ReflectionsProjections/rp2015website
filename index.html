@@ -1,3 +1,19 @@
+<!--
+
+   +---------------------------------------------------------
+   :". /  /  /
+   :.-". /  /
+   : _.-". /
+   :"  _.-".
+   :-""     ".
+   :
+   :
+ ^.-.^
+'^\+/^`
+'/`"'\`
+
+-->
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -15,11 +31,19 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <nav>
+        <nav id="mobile-nav">
             <ul>
                 <li class="active"><a data-anchor="home">Home</a></li>
                 <li><a data-anchor="about">About</a></li>
-                <li><a data-anchor="speakers">Speakers</a></li>
+                <li><a data-anchor="schedule">Schedule</a></li>
+                <li><a data-anchor="faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <nav id="desktop-nav">
+            <ul>
+                <li class="active"><a data-anchor="home">Home</a></li>
+                <li><a data-anchor="about">About</a></li>
+                <!-- <li><a data-anchor="speakers">Speakers</a></li> -->
                 <li><a data-anchor="schedule">Schedule</a></li>
                 <li><a data-anchor="faq">F.A.Q.</a></li>
                 <!-- <li><a data-anchor="sponsors">Sponsors</a></li> -->
@@ -71,7 +95,7 @@
             </div>
         </section>
 
-        <section data-section="speakers" class="speakers">
+<!--         <section data-section="speakers" class="speakers">
             <div class="content right">
                 <h3>Conference Speakers</h3>
                 <div class="speakers">
@@ -113,7 +137,7 @@
                     </figure>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section data-section="schedule" class="schedule">
             <div class="content">
@@ -121,37 +145,69 @@
                 <div class="col">
                     <ul>
                         <h4>Thu, Oct 1</h4>
-                        <li><small>3:00p</small>Startup Fair<span>Location</span></li>
+                        <li><small>4:00p</small>Startup Fair<span>Location</span></li>
+                        <li><small>8:00p</small>Speaker: Roy Bahat<span>Location</span></li>
                     </ul>
                     <ul>
                         <h4>Fri, Oct 2</h4>
-                        <li><small>8:00a</small>Job Fair<span>Location</span></li>
-                        <li><small>3:15p</small>Speaker<span>Location</span></li>
-                        <li><small>4:15p</small>Dinner<span>Location</span></li>
-                        <li><small>5:15p</small>Speaker<span>Location</span></li>
-                        <li><small>6:30p</small>Alumni Event<span>Location</span></li>
+                        <li><small>9:00a</small>Breakfast<span>Location</span></li>
+                        <li><small>10:00a</small>Job Fair<span>Location</span></li>
+                        <li><small>5:00p</small>Speaker: Craig Reynolds<span>Location</span></li>
+                        <li><small>6:00p</small>Dinner<span>Location</span></li>
+                        <li><small>7:00p</small>Speaker: Katherine Scott<span>Location</span></li>
+                        <li><small>8:00p</small>Speaker: Mike Calcagno<span>Location</span></li>
+                        <li><small>9:00p</small>Alumni Event<span>Location</span></li>
                     </ul>
                 </div>
                 <div class="col">
                     <ul>
                         <h4>Sat, Oct 3</h4>
-                        <li><small>8:00a</small>Speaker<span>Location</span></li>
-                        <li><small>9:15a</small>Speaker<span>Location</span></li>
-                        <li><small>10:30a</small>Lunch<span>Location</span></li>
-                        <li><small>11:30a</small>Speaker<span>Location</span></li>
-                        <li><small>12:45p</small>Speaker<span>Location</span></li>
-                        <li><small>2:00p</small>Speaker<span>Location</span></li>
-                        <li><small>3:15p</small>Speaker<span>Location</span></li>
-                        <li><small>4:45p</small>Speaker<span>Location</span></li>
+                        <li><small>9:00a</small>Breakfast<span>Location</span></li>
+                        <li><small>10:00a</small>Speaker: Jason Tan<span>Location</span></li>
+                        <li><small>11:00a</small>Speaker: Luke Rajlich<span>Location</span></li>
+                        <li><small>12:00p</small>Lunch/Microsoft Talk<span>Location</span></li>
+                        <li><small>1:00p</small>Speaker: Cassidy Williams<span>Location</span></li>
+                        <li><small>2:00p</small>Speaker: Scott Behrens<span>Location</span></li>
+                        <li><small>3:00p</small>Speaker: Yisoung Yue<span>Location</span></li>
+                        <li><small>4:00p</small>Speaker: Winnie Cheng<span>Location</span></li>
+                        <li><small>5:00p</small>Speaker: Alan Braveman<span>Location</span></li>
+                        <li><small>6:00p</small>Dinner<span>Location</span></li>
+                        <li><small>7:00p</small>Speaker: Anna Patterson<span>Location</span></li>
+                        <li><small>8:00p</small>Speaker: Jonah Grant<span>Location</span></li>
+                        <li><small>9:00p</small>Speaker: Jerry Talton<span>Location</span></li>
+                        <li><small>9:00p</small>Puzzlebang! Closing<span>Location</span></li>
                     </ul>
                     <ul>
                         <h4>Sun, Oct 4</h4>
-                        <li><small>8:00a</small>Brunch<span>Location</span></li>
-                        <li><small>11:00a</small>Mechmania Closing<span>Location</span></li>
+                        <li><small>9:00a</small>Breakfast<span>Location</span></li>
+                        <li><small>10:00a</small>Projects@RP<span>Location</span></li>
+                        <li><small>10:00a</small>Brunch<span>Location</span></li>
+                        <li><small>12:00p</small>Lunch<span>Location</span></li>
+                        <li><small>12:30p</small>Mechmania Closing<span>Location</span></li>
                     </ul>
                 </div>
             </div>
         </section>
+<!--
+
+                   ____                      ,
+          /---.'.__             ____//
+               '--.\           /.---'
+          _______  \\         //
+        /.------.\  \|      .'/  ______
+       //  ___  \ \ ||/|\  //  _/_----.\__
+      |/  /.-.\  \ \:|< >|// _/.'..\   '--'
+         //   \'. | \'.|.'/ /_/ /  \\
+        //     \ \_\/" ' ~\-'.-'    \\
+       //       '-._| :H: |'-.__     \\
+      //           (/'==='\)'-._\     ||
+      ||                        \\    \|
+      ||                         \\    '
+      |/                          \\
+                                   ||
+                                   ||
+                                   \\
+                                    ' -->
 
         <section data-section="faq" class="faq">
             <div class="content right">
@@ -176,7 +232,7 @@
 
                 <h4>Travel</h4>
                 <hr>
-                <p class="address">Reflections | Projections is held in the Siebel Center for Computer Science at the University of Illinois in Urbana-Champaign<span>401 S Goodwin Ave, Urbana, IL</span><p>
+                <p class="address">Reflections | Projections is held in the Siebel Center for Computer Science at the University of Illinois in Urbana-Champaign<a target="_blank" href="https://www.google.com/maps/place/401+S+Goodwin+Ave,+Urbana,+IL+61801">401 S Goodwin Ave, Urbana, IL</a><p>
 
                 <div class="questions">
                     <div>

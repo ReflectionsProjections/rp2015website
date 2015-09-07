@@ -12,9 +12,7 @@ $muted-red:   #d68f8f;
 html, body {
 	font-family: 'Lora', serif;
 	background: url(../img/dot.png);
-	overflow: hidden;
 }
-nav {display: none;}
 
 h1, h2, h3, h4, h5, h6, nav {
 	font-family: 'Ubuntu', sans-serif;
@@ -46,7 +44,7 @@ h3 {
 	margin: 0;
 }
 
-nav {
+nav#desktop-nav {
 	position: fixed;
 	top: 50%;
 	transform: translate(0, -50%);
@@ -104,9 +102,46 @@ nav {
 	}
 }
 
+nav#mobile-nav {
+	display: none;
+	z-index: 5;
+
+	@include cf();
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $blue;
+	border-bottom: 2px solid $light-grey;
+
+	color: $nav-grey;
+	font: { weight: 300; size: .9em; }
+	text: { transform: uppercase; }
+
+	ul {
+		list-style: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	li {
+		@include span(1/4);
+		transition: .1s color;
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 10px;
+
+		cursor: pointer;
+	}
+
+	li:hover, li.active {
+		color: $light-grey;
+
+		border-bottom: 6px solid $light-grey;
+	}
+}
+
 section {
 	box-sizing: border-box;
-	min-height: 600px;
 	padding-top: 200px;
 
 	p {
@@ -132,6 +167,7 @@ section {
 }
 
 section.home {
+	min-height: 600px;
 	padding-top: 260px;
 
 	h2 {
@@ -326,6 +362,7 @@ section.schedule {
 		}
 
 		span {
+			display: none;
 			float: right;
 		}
 	}
@@ -365,11 +402,15 @@ section.faq {
 
 	.address {
 
-		span {
+		a {
 			display: block;
 			margin-top: 6px;
 			color: $medium-grey;
 			font-size: .9em;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -404,7 +445,7 @@ section.faq {
 
 
 @media only screen and (max-width: 1170px) {
-	nav {
+	nav#desktop-nav {
 		display: none;
 	}
 
@@ -415,6 +456,77 @@ section.faq {
 		.right {
 			margin-right: 100px;
 			margin-left: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	section.home {
+		h2 {
+			font-size: 2.8em;
+		}
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	nav#mobile-nav {
+		display: block;
+	}
+
+	h1 {
+		position: absolute;
+		top: 60px;
+	}
+
+	section {
+		padding: 10px 10px 0px;
+
+		.content {
+			margin: 0;
+			max-width: 100% !important;
+		}
+
+		&:last-of-type {
+			padding-bottom: 10px;
+		}
+	}
+
+	section.home {
+		padding: 260px 20px 0;
+
+		h2 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	section {
+		.content {
+			padding: 30px 20px !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	section.home {
+		h2 {
+			font-size: 2.5em;
+		}
+	}
+
+	section.schedule {
+		.col {
+			@include stack();
+		}
+	}
+
+	section.faq {
+		.questions {
+			> div {
+				@include stack();
+			}
 		}
 	}
 }

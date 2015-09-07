@@ -41,7 +41,10 @@ $('#typed').typed({
 		"a meeting of the minds",
 		"a celebration of computer science",
 		"competing in Mechmania",
-		// "INFESTED WITH SPIDERS PLEASE SEND HELP",
+	/*       ___
+		///\(o_o)/\\\
+		|||  ` '  |||     */ 
+		"INFESTED WITH SPIDERS PLEASE SEND HELP",
 		"open to everyone",
 		"more than just a conference",
 		"an annual event",
