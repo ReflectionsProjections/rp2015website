@@ -14,6 +14,23 @@ html, body {
 	background: url(../img/dot.png);
 }
 
+svg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+svg path {
+  opacity: .3;
+  fill: none;
+  stroke: $red;
+  stroke-width: 1.5px;
+  stroke-linecap: rounded;
+}
+
 h1, h2, h3, h4, h5, h6, nav {
 	font-family: 'Ubuntu', sans-serif;
 	color: $black;
@@ -171,12 +188,15 @@ section.home {
 	padding-top: 260px;
 
 	h2 {
+		position: relative;
 		margin-left: 150px;
 		padding-right: 200px;
 
 		font-weight: 700;
 		font-size: 4em;
 		color: #fff;
+
+		z-index: 2;
 	}
 }
 

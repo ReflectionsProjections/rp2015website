@@ -135,6 +135,21 @@ html, body {
   font-family: 'Lora', serif;
   background: url(../img/dot.png); }
 
+svg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+
+svg path {
+  opacity: .3;
+  fill: none;
+  stroke: #d04040;
+  stroke-width: 1.5px;
+  stroke-linecap: rounded; }
+
 h1, h2, h3, h4, h5, h6, nav {
   font-family: 'Ubuntu', sans-serif;
   color: #161515; }
@@ -263,11 +278,13 @@ section.home {
   min-height: 600px;
   padding-top: 260px; }
   section.home h2 {
+    position: relative;
     margin-left: 150px;
     padding-right: 200px;
     font-weight: 700;
     font-size: 4em;
-    color: #fff; }
+    color: #fff;
+    z-index: 2; }
 
 section.about {
   line-height: 1.4; }
