@@ -466,6 +466,18 @@ section.faq {
 	}
 }
 
+
+section.sponsors {
+	.content {
+		@include cf();
+		padding: 50px 40px 30px;
+		max-width: 700px;
+	}
+	img {
+		height: 50px;
+	}
+}
+
 /* taken from Matt Boldt's 'Typed.js' */ 
 .typed-cursor {
     opacity: 1;
