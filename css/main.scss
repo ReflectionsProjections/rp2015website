@@ -411,6 +411,14 @@ section.faq {
 		> div {
 			@include col(1/2, $cycle: 2);
 		}
+
+		a{
+			color: $red;
+
+			&:hover{
+				color: $muted-red;
+			}
+		}
 	}
 
 	h4 {
@@ -438,6 +446,7 @@ section.faq {
 	p {
 		margin-top: 4px;
 		font-size: .9em;
+		line-height: 1.3;
 	}
 }
 
