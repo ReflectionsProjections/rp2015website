@@ -289,6 +289,22 @@ section.about {
 		&:first-child {
 			padding-left: 0;
 		}
+
+	}
+
+	.register-button{
+			margin-top: -30px;
+			font-weight: 700;
+			border: 2px solid $red;
+			height: 30px;
+			text-align: center;
+			text-transform: uppercase;
+			padding-top: 10px;
+
+			&:hover{
+				color: #fff;
+				background-color: $red;
+			}
 	}
 
 	.line {
