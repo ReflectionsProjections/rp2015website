@@ -27,6 +27,7 @@
 
         <link href='http://fonts.googleapis.com/css?family=Lora|Ubuntu:700,400,300,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="css/lightslider.min.css" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -66,45 +67,68 @@
 
         <section data-section="about" class="about">
             <div class="content">
-                <div class="about-main">
-                    <div class="about-wrapper">
-                        <h3>What is Reflections | Projections?</h3>
-                        <p>
-                            Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign. 
-                        </p>
-                        <p>
-                            We draw students, speakers, and companies from across the US and the world. Join us and listen to tech talks from across the industry, to participate in an Artificial Intelligence programming competition in Mechmania, to solve puzzles throughout the conference during PuzzleBang!, and to attend our job and startup fairs.
-                        </p>
-                        <p>
-                            The conference is free and open to anyone regardless of age, major, job, or affiliation with University of Illinois. So come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
-                        </p>
-                        <p>
-                           You do not need to register for Reflections|Projections to attend, however, registering is the only way to guarantee you'll get a free conference t-shirt!
-                        </p>   
-                        <p>
-                           <a href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945"><div class="register-button">Register for Conference</a>
-                        </p>
+                <h3>What is Reflections | Projections?</h3>
+                <p>
+                    Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign. 
+                </p>
+                <p>
+                    We draw students, speakers, and companies from across the US and the world. Join us and listen to tech talks from across the industry, to participate in an Artificial Intelligence programming competition in Mechmania, to solve puzzles throughout the conference during PuzzleBang!, and to attend our job and startup fairs.
+                </p>
+                <p>
+                    The conference is free and open to anyone regardless of age, major, job, or affiliation with University of Illinois. So come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
+                </p>
+                <p>
+                   You do not need to register for Reflections | Projections to attend, however, registering is the only way to guarantee you'll get a free conference t-shirt!
+                </p>   
+                <p>
+                   <a class="register-button" href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945">Register for Conference</a>
+                </p>
 
-                        <hr>
-                    </div>
-                    <span class="more">Learn more about:</span>
-                    <div class="links">
-                        <a class="active">Startup Fair</a>
-                        <span class="line">|</span>
-                        <a>Career Fair</a>
-                        <span class="line">|</span>
-                        <a class>Mechmania</a>
-                        <span class="line">|</span>
-                        <a>Puzzlebang!</a>
-                        <span class="line">|</span>
-                        <a>Projects@RP</a>
-                        <button class="close">X</button>
-                        <hr>
-                    </div>
+                <hr>
+                <span class="more">Learn more about:</span>
+                <div class="links learn-more">
+                    <a class="active" data-number="0">Startup Fair</a>
+                    <span class="line">|</span>
+                    <a data-number="1">Career Fair</a>
+                    <span class="line">|</span>
+                    <a data-number="2">Mechmania</a>
+                    <span class="line">|</span>
+                    <a data-number="3">Puzzlebang!</a>
+                    <span class="line">|</span>
+                    <a data-number="4">Projects@RP</a>
+                    <hr>
                 </div>
-                <ul class="about-slider hidden">
+                <ul class="about-slider">
                     <li>
-                        Hello
+                        The Startup Fair at Reflections | Projections brings in many of the fastest-growing, most innovative startups from across the country to connect with the most entrepreneurial, driven students at Illinois. If you’re looking to dive off the deep end and work in a fast-paced, dynamic environment with brilliant co-workers, then the Startup Fair is the place for you. Every startup at the fair is offering hands-on experience, the ability to make a meaningful impact, and the chance to challenge yourself and learn faster than ever before. Make sure you attend the Startup Fair to interact with the breakthrough companies of the future.
+                    </li>
+                    <li>
+                        The career fair at Reflections | Projections brings in some of the best companies from across the country and they’re all here to meet you. These companies want the cream of the crop and they know that R|P is the place to find it. So whether you’re into security, web development, or natural language processing, whether you’re an expert in your field, starting to get your head on straight, or even brand new to programming, come to our career and startup fairs and get your resume out there!
+                    </li>
+                    <li>
+                        <span class="center">&lt;INCOMING TRANSMISSION&gt;</span>
+                        <br>
+                        Hello cybercommander!
+                        <br><br>
+                        The 21st annual Military Electronic Combat Hardware Training Competition (Mechmania) is fast approaching! The competition ranks cyberwarriors by pitting them against each other in a simulated cyber-warfare environment. However, there is one major catch - since the United Nations Network Security Agency (UN-NSA) deems it too dangerous for human cyberwarriors to participate, they have instructed you to build a computer program to do so instead!
+                        <br><br>
+                        Should you accept this mission, you and up to 3 friends will have 24 hours to build, test, and deploy your automatic cyberwarriors against the world’s finest cybercommanders. The UN-NSA will provide meals and snacks to all participants as well as prizes for the best performances.
+                        <br>
+                        Good luck, cybercommander. You’ll need it out there.
+                        <br><br>
+                        <span class="center">&lt;END TRANSMISSION&gt;</span>
+                    </li>
+                    <li>
+                        PuzzleBang is an annual puzzle contest held during ACM R|P conferences where participants complete perplexing problems for a chance to win great prizes! Modelled after decade-old Urbana-Champaign traditions, PuzzleBang brings people together in order to solve classical algorithmic puzzles. Students are encouraged to form teams of 2-4 in order to compete in the week-long puzzle challenge. These Problems are geared towards both experienced competitors and new participants alike. If you’ve never competed in a puzzle contest before, don’t be afraid to join in on the fun!
+                        <br><br>
+                        Prizes will be awarded to the top 3 teams and extra follow-up prizes will be given to teams that weren’t in the top three, but did well during the week. Come join us for a great time!
+                    </li>
+                    <li>
+                        Hacker – “A person who combines excellence, playfulness, cleverness and exploration in performed activities.” ~Wikipedia
+                        <br><br>
+                        Hackathon and hacker culture is on the rise, and Illinois has taken it to heart. Many students in ACM@UIUC participate in hackathons, and there are plenty of amazing projects that they have created.
+                        <br><br>
+                        Reflections|Projections and HackIllinios proudly present Projects@RP. Our student hackers and innovators will be demoing their projects and showing off the Illini hacker enthusiasm. Projects will range from SIG projects developed over months to hackathon projects created in days. Come see what Illinois hackers are doing!
                     </li>
                 </ul>
             </div>
@@ -233,16 +257,16 @@
                 <hr>
                 <div class="questions">
                     <div>
-                        <h5>Do I need to reigster?</h5>
+                        <h5>Do I need to register?</h5>
                         <p>Nope! But registering is the only way you'll be guaranteed a tshirt. Click <a href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945">here</a> to register.</p>
                     </div>
                     <div>
-                        <h5>Do I need to reigster for MechMania??</h5>
+                        <h5>Do I need to register for MechMania??</h5>
                         <p>Yes! Click <a href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945">here</a> to register for MechMania.</p>
                     </div>
                     <div>
                         <h5>Is the conference free?</h5>
-                        <p>Yes! Reflection|Projections is completely free! That includes MechMania and other events</p>
+                        <p>Yes! Reflections | Projections is completely free! This includes MechMania and other events.</p>
                     </div>
                     <div>
                         <h5>Will food be provided?</h5>
@@ -256,11 +280,12 @@
                     <div>
                         <h5>What's the difference between the Startup Fair and the Career Fair?</h5>
                         <p>The Startup Fair is for startup companies, and the Career Fair is for established companies. 
-                        *The difference between startup and established companies is determined by conference staff.</p>
+                        <br><br>
+                        The difference between startup and established companies is determined by conference staff.</p>
                     </div>
                     <div>
                         <h5>I want to volunteer! How do I get involved?</h5>
-                        <p>Please Join our <a href="https://www.facebook.com/events/492882687555386/">Facebook event</a>.</p>
+                        <p>Please join our <a href="https://www.facebook.com/events/492882687555386/">Facebook event</a>.</p>
                     </div>
                     <div>
                         <h5>I'm a company! I have questions!</h5>
@@ -309,6 +334,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="js/lightslider.min.js"></script>
         <script src="js/typed.min.js"></script>
         <script src="js/main.js"></script>
     </body>

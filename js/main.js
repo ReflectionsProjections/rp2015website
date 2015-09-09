@@ -1,3 +1,9 @@
+var slider = $('.about-slider').lightSlider({
+	item: 1,
+	adaptiveHeight: true,
+	pager: false
+});
+
 $('nav a').click(function() {
 	$('nav li').removeClass('active');
 	$(this).parent().addClass('active');
@@ -22,8 +28,10 @@ $(window).scroll(function() {
     });
 }).scroll();
 
-$('.about-main a').click(function() {
-	$('.about-main').toggleClass('hidden');
+$('.learn-more a').click(function() {
+	slider.goToSlide($(this).attr('data-number'));
+	$('.learn-more a').removeClass('active');
+	$(this).addClass('active');
 });
 
 var $word = $('.title-text span:first-child');

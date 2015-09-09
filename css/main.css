@@ -307,30 +307,10 @@ section.about {
     font-weight: 400;
     color: #a5a5a5; }
   section.about .links hr {
-    transform: translate(-20px, 0);
-    width: 115%;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 11px;
     border-color: #161515;
-    opacity: 0;
     transition: opacity .6s; }
-  section.about .close {
-    float: right;
-    position: relative;
-    top: -20px;
-    right: -50px;
-    font-family: 'Ubuntu';
-    width: 30px;
-    height: 30px;
-    color: #d0d0d0;
-    border: 2px solid #d0d0d0;
-    border-radius: 50%;
-    background: none;
-    outline: none;
-    opacity: 0;
-    transition: opacity .6s, color .1s, border-color .1s; }
-    section.about .close:hover {
-      color: #a5a5a5;
-      border-color: #a5a5a5; }
   section.about a {
     font-family: 'Ubuntu', sans-serif;
     color: #d04040;
@@ -339,18 +319,18 @@ section.about {
     transition: color 0.1s; }
     section.about a:hover {
       color: #d68f8f; }
-    section.about a.active {
+    section.about a.active, section.about a:hover {
       border-bottom: 4px solid #d04040; }
     section.about a:first-child {
       padding-left: 0; }
   section.about .register-button {
-    margin-top: -30px;
+    display: block;
     font-weight: 700;
     border: 2px solid #d04040;
-    height: 30px;
+    padding: 10px 0;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 10px; }
+    transition: color .2s, background-color .2s; }
     section.about .register-button:hover {
       color: #fff;
       background-color: #d04040; }
@@ -359,22 +339,9 @@ section.about {
     top: -3px;
     font-size: .8em;
     color: #a5a5a5; }
-  section.about .about-wrapper {
-    opacity: 1;
-    transition: opacity .6s; }
-  section.about .about-main {
-    transition: transform .6s ease-in-out; }
-    section.about .about-main.hidden {
-      transform: translate(0, -90%); }
-      section.about .about-main.hidden .about-wrapper {
-        opacity: 0; }
-      section.about .about-main.hidden .links hr, section.about .about-main.hidden .close {
-        opacity: 1; }
-  section.about .about-slider {
-    position: absolute;
-    top: 100px;
-    list-style: none;
-    padding: 0; }
+  section.about .center {
+    display: block;
+    text-align: center; }
 
 section.speakers .content {
   *zoom: 1;
@@ -564,9 +531,6 @@ section.sponsors img {
     margin-right: 100px;
     margin-left: auto; } }
 @media only screen and (max-width: 950px) {
-  section.home h2 {
-    font-size: 2.8em; } }
-@media only screen and (max-width: 950px) {
   nav#mobile-nav {
     display: block; }
 
@@ -583,11 +547,25 @@ section.sponsors img {
   section.home {
     padding: 260px 20px 0; }
     section.home h2 {
+      font-size: 2.8em;
       margin: 0;
-      padding: 0; } }
-@media only screen and (max-width: 700px) {
+      padding: 0; }
+
   section .content {
     padding: 30px 20px !important; } }
+@media only screen and (max-width: 700px) {
+  section.about .links .line {
+    display: none; }
+  section.about .links a {
+    padding-left: 0;
+    padding-right: 30px;
+    padding-bottom: 0;
+    color: #d68f8f; }
+    section.about .links a:hover, section.about .links a.active {
+      border: none;
+      color: #d04040; }
+  section.about .links hr {
+    margin-top: 4px; } }
 @media only screen and (max-width: 600px) {
   section.home h2 {
     font-size: 2.5em; }

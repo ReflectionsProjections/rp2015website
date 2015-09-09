@@ -233,40 +233,11 @@ section.about {
 
 	.links {
 		hr {
-			transform: translate(-20px, 0);
-			width: 115%;
-			margin-top: 10px;
+			width: 100%;
+			margin-top: 11px;
 			border-color: $black;
 
-			opacity: 0;
 			transition: opacity .6s;
-		}
-	}
-
-	.close {
-		float: right;
-		position: relative;
-		top: -20px;
-		right: -50px;
-
-		font-family: 'Ubuntu';
-		width: 30px;
-		height: 30px;
-
-		color: $light-grey;
-		border: 2px solid $light-grey;
-		border-radius: 50%;
-
-		background: none;
-		outline: none;
-
-		opacity: 0;
-
-		transition: opacity .6s, color .1s, border-color .1s;
-
-		&:hover {
-			color: $medium-grey;
-			border-color: $medium-grey;
 		}
 	}
 
@@ -282,7 +253,7 @@ section.about {
 			color: $muted-red;
 		}
 
-		&.active {
+		&.active, &:hover {
 			border-bottom: 4px solid $red;
 		}
 
@@ -293,18 +264,21 @@ section.about {
 	}
 
 	.register-button{
-			margin-top: -30px;
-			font-weight: 700;
-			border: 2px solid $red;
-			height: 30px;
-			text-align: center;
-			text-transform: uppercase;
-			padding-top: 10px;
+		display: block;
 
-			&:hover{
-				color: #fff;
-				background-color: $red;
-			}
+		font-weight: 700;
+		border: 2px solid $red;
+		padding: 10px 0;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		transition: color .2s, background-color .2s;
+
+		&:hover{
+			color: #fff;
+			background-color: $red;
+		}
 	}
 
 	.line {
@@ -314,34 +288,11 @@ section.about {
 		color: $medium-grey;
 	}
 
-	.about-wrapper {
-		opacity: 1;
-		transition: opacity .6s;
+	.center {
+		display: block;
+		text-align: center;
 	}
 
-	.about-main {
-		transition: transform .6s ease-in-out;
-
-		&.hidden {
-			transform: translate(0, -90%);
-
-			.about-wrapper {
-				opacity: 0;
-			}
-
-			.links hr, .close {
-				opacity: 1;
-			}
-		}
-	}
-
-	.about-slider {
-		position: absolute;
-		top: 100px;
-
-		list-style: none;
-		padding: 0;
-	}
 }
 
 section.speakers {
@@ -519,14 +470,6 @@ section.sponsors {
 }
 
 @media only screen and (max-width: 950px) {
-	section.home {
-		h2 {
-			font-size: 2.8em;
-		}
-	}
-}
-
-@media only screen and (max-width: 950px) {
 	nav#mobile-nav {
 		display: block;
 	}
@@ -549,16 +492,41 @@ section.sponsors {
 		padding: 260px 20px 0;
 
 		h2 {
+			font-size: 2.8em;
 			margin: 0;
 			padding: 0;
+		}
+	}
+
+	section {
+		.content {
+			padding: 30px 20px !important;
 		}
 	}
 }
 
 @media only screen and (max-width: 700px) {
-	section {
-		.content {
-			padding: 30px 20px !important;
+	section.about {
+		.links {
+			.line {
+				display: none;
+			}
+
+			a {
+				padding-left: 0;
+				padding-right: 30px;
+				padding-bottom: 0;
+				color: $muted-red;
+
+				&:hover, &.active {
+					border: none;
+					color: $red;
+				}
+			}
+
+			hr {
+				margin-top: 4px;
+			}
 		}
 	}
 }
