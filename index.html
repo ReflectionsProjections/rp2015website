@@ -1,66 +1,341 @@
+<!--
+
+   +---------------------------------------------------------
+   :". /  /  /
+   :.-". /  /
+   : _.-". /
+   :"  _.-".
+   :-""     ".
+   :
+   :
+ ^.-.^
+'^\+/^`
+'/`"'\`
+
+-->
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+
         <title>Reflections | Projections 2015</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora|Ubuntu:700,400,300,400italic' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="css/lightslider.min.css" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body onload='init()'>
+        <nav id="mobile-nav">
+            <ul>
+                <li class="active"><a data-anchor="home">Home</a></li>
+                <li><a data-anchor="about">About</a></li>
+                <li><a data-anchor="schedule">Schedule</a></li>
+                <li><a data-anchor="faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <nav id="desktop-nav">
+            <ul>
+                <li class="active"><a data-anchor="home">Home</a></li>
+                <li><a data-anchor="about">About</a></li>
+                <!-- <li><a data-anchor="speakers">Speakers</a></li> -->
+                <li><a data-anchor="schedule">Schedule</a></li>
+                <li><a data-anchor="faq">F.A.Q.</a></li>
+                <!-- <li><a data-anchor="sponsors">Sponsors</a></li> -->
+            </ul>
+        </nav>
 
-        <section class="year">
-            <div class="parallax_wrapper">
-                <div class="parallax_layer" id="layer-0"><img src="img/top_triangle.png" /></div>
-                <div class="parallax_layer" id="layer-1"><img src="img/20.png" /></div>
-                <div class="parallax_layer" id="layer-2"><img src="img/15.png" /></div>
+        <h1>
+            Reflections | Projections
+            <hr>
+            Oct 1 - 4, 2015
+        </h1>
+
+        <section data-section="home" class="home">
+            <h2>Reflections Projections is 
+                <div>
+                    <span id="typed"></span>
+                </div>
+            </h2>
+        </section>
+
+        <section data-section="about" class="about">
+            <div class="content">
+                <h3>What is Reflections | Projections?</h3>
+                <p>
+                    Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign. 
+                </p>
+                <p>
+                    We draw students, speakers, and companies from across the US and the world. Join us and listen to tech talks from across the industry, to participate in an Artificial Intelligence programming competition in Mechmania, to solve puzzles throughout the conference during PuzzleBang!, and to attend our job and startup fairs.
+                </p>
+                <p>
+                    The conference is free and open to anyone regardless of age, major, job, or affiliation with University of Illinois. So come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
+                </p>
+                <p>
+                   You do not need to register for Reflections | Projections to attend, however, registering is the only way to guarantee you'll get a free conference t-shirt!
+                </p>   
+                <p>
+                   <a class="register-button" href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945">Register for Conference</a>
+                </p>
+
+                <hr>
+                <span class="more">Learn more about:</span>
+                <div class="links learn-more">
+                    <a class="active" data-number="0">Startup Fair</a>
+                    <span class="line">|</span>
+                    <a data-number="1">Career Fair</a>
+                    <span class="line">|</span>
+                    <a data-number="2">Mechmania</a>
+                    <span class="line">|</span>
+                    <a data-number="3">Puzzlebang!</a>
+                    <span class="line">|</span>
+                    <a data-number="4">Projects@RP</a>
+                    <hr>
+                </div>
+                <ul class="about-slider">
+                    <li>
+                        The Startup Fair at Reflections | Projections brings in many of the fastest-growing, most innovative startups from across the country to connect with the most entrepreneurial, driven students at Illinois. If you’re looking to dive off the deep end and work in a fast-paced, dynamic environment with brilliant co-workers, then the Startup Fair is the place for you. Every startup at the fair is offering hands-on experience, the ability to make a meaningful impact, and the chance to challenge yourself and learn faster than ever before. Make sure you attend the Startup Fair to interact with the breakthrough companies of the future.
+                    </li>
+                    <li>
+                        The career fair at Reflections | Projections brings in some of the best companies from across the country and they’re all here to meet you. These companies want the cream of the crop and they know that R|P is the place to find it. So whether you’re into security, web development, or natural language processing, whether you’re an expert in your field, starting to get your head on straight, or even brand new to programming, come to our career and startup fairs and get your resume out there!
+                    </li>
+                    <li>
+                        <span class="center">&lt;INCOMING TRANSMISSION&gt;</span>
+                        <br>
+                        Hello cybercommander!
+                        <br><br>
+                        The 21st annual Military Electronic Combat Hardware Training Competition (Mechmania) is fast approaching! The competition ranks cyberwarriors by pitting them against each other in a simulated cyber-warfare environment. However, there is one major catch - since the United Nations Network Security Agency (UN-NSA) deems it too dangerous for human cyberwarriors to participate, they have instructed you to build a computer program to do so instead!
+                        <br><br>
+                        Should you accept this mission, you and up to 3 friends will have 24 hours to build, test, and deploy your automatic cyberwarriors against the world’s finest cybercommanders. The UN-NSA will provide meals and snacks to all participants as well as prizes for the best performances.
+                        <br>
+                        Good luck, cybercommander. You’ll need it out there.
+                        <br><br>
+                        <span class="center">&lt;END TRANSMISSION&gt;</span>
+                    </li>
+                    <li>
+                        PuzzleBang is an annual puzzle contest held during ACM R|P conferences where participants complete perplexing problems for a chance to win great prizes! Modelled after decade-old Urbana-Champaign traditions, PuzzleBang brings people together in order to solve classical algorithmic puzzles. Students are encouraged to form teams of 2-4 in order to compete in the week-long puzzle challenge. These Problems are geared towards both experienced competitors and new participants alike. If you’ve never competed in a puzzle contest before, don’t be afraid to join in on the fun!
+                        <br><br>
+                        Prizes will be awarded to the top 3 teams and extra follow-up prizes will be given to teams that weren’t in the top three, but did well during the week. Come join us for a great time!
+                    </li>
+                    <li>
+                        Hacker – “A person who combines excellence, playfulness, cleverness and exploration in performed activities.” ~Wikipedia
+                        <br><br>
+                        Hackathon and hacker culture is on the rise, and Illinois has taken it to heart. Many students in ACM@UIUC participate in hackathons, and there are plenty of amazing projects that they have created.
+                        <br><br>
+                        Reflections|Projections and HackIllinios proudly present Projects@RP. Our student hackers and innovators will be demoing their projects and showing off the Illini hacker enthusiasm. Projects will range from SIG projects developed over months to hackathon projects created in days. Come see what Illinois hackers are doing!
+                    </li>
+                </ul>
             </div>
         </section>
-        <section class="title">
-            <div class="content">
-                <h1>Reflections | Projections</h1>
-                <h2>October 1-4, 2015</h2>
-                <div id="mc_embed_signup">
-                    <form action="//uiuc.us4.list-manage.com/subscribe/post?u=0628ea3ae6ae669985da21668&amp;id=5894c9f691" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
 
-                            <div class="mc-field-group">
-                                <label for="mce-EMAIL">Leave your email below to stay updated on all things R|P 2015!</label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
-                            </div>
-                            <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;"><input type="text" name="b_0628ea3ae6ae669985da21668_5894c9f691" tabindex="-1" value=""></div>
-                        </div>
-                    </form>
+<!--         <section data-section="speakers" class="speakers">
+            <div class="content right">
+                <h3>Conference Speakers</h3>
+                <div class="speakers">
+                    <figure>
+                        <img src="img/craig-reynolds.jpg">
+                        <h4>Craig Reynolds</h4>
+                    </figure>
+                    <figure>
+                        <img src="img/cassidy-williams.jpg">
+                        <h4>Cassidy Williams</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>David Zmick</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>Lawrence Humphrey</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>Kavya Gundavaram</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>Claudia Nadolny</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>Zach Miller</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>Sunny Pruthi</h4>
+                    </figure>
+                    <figure>
+                        <img src="http://placehold.it/175x175">
+                        <h4>Jordan Konick</h4>
+                    </figure>
+                </div>
+            </div>
+        </section> -->
+
+        <section data-section="schedule" class="schedule">
+            <div class="content">
+                <h3>Conference Schedule</h3>
+                <div class="col">
+                    <ul>
+                        <h4>Thu, Oct 1</h4>
+                        <li><small>4:00p</small>Startup Panel<span>Location</span></li>
+                        <li><small>5:00p</small>Startup Fair<span>Location</span></li>
+                        <li><small>8:00p</small>Speaker: Roy Bahat<span>Location</span></li>
+                    </ul>
+                    <ul>
+                        <h4>Fri, Oct 2</h4>
+                        <li><small>9:00a</small>Breakfast<span>Location</span></li>
+                        <li><small>10:00a</small>Job Fair<span>Location</span></li>
+                        <li><small>5:00p</small>Speaker: Craig Reynolds<span>Location</span></li>
+                        <li><small>6:00p</small>Dinner<span>Location</span></li>
+                        <li><small>7:00p</small>Speaker: Katherine Scott<span>Location</span></li>
+                        <li><small>8:00p</small>Speaker: Mike Calcagno<span>Location</span></li>
+                        <li><small>9:00p</small>Alumni Event<span>Location</span></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <h4>Sat, Oct 3</h4>
+                        <li><small>9:00a</small>Breakfast<span>Location</span></li>
+                        <li><small>10:00a</small>Speaker: Jason Tan<span>Location</span></li>
+                        <li><small>11:00a</small>Speaker: Luke Rajlich<span>Location</span></li>
+                        <li><small>12:00p</small>Lunch/Microsoft Talk<span>Location</span></li>
+                        <li><small>1:00p</small>Speaker: Cassidy Williams<span>Location</span></li>
+                        <li><small>2:00p</small>Speaker: Scott Behrens<span>Location</span></li>
+                        <li><small>3:00p</small>Speaker: Yisoung Yue<span>Location</span></li>
+                        <li><small>4:00p</small>Speaker: Winnie Cheng<span>Location</span></li>
+                        <li><small>5:00p</small>Speaker: Alan Braveman<span>Location</span></li>
+                        <li><small>6:00p</small>Dinner<span>Location</span></li>
+                        <li><small>7:00p</small>Speaker: Anna Patterson<span>Location</span></li>
+                        <li><small>8:00p</small>Speaker: Jonah Grant<span>Location</span></li>
+                        <li><small>9:00p</small>Speaker: Jerry Talton<span>Location</span></li>
+                        <li><small>9:00p</small>Puzzlebang! Closing<span>Location</span></li>
+                    </ul>
+                    <ul>
+                        <h4>Sun, Oct 4</h4>
+                        <li><small>9:00a</small>Breakfast<span>Location</span></li>
+                        <li><small>10:00a</small>Projects@RP<span>Location</span></li>
+                        <li><small>10:00a</small>Brunch<span>Location</span></li>
+                        <li><small>12:00p</small>Lunch<span>Location</span></li>
+                        <li><small>12:30p</small>Mechmania Closing<span>Location</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section class="text">
-            <p>
-                Reflections | Projections is a tech conference organized and run by students at the University of Illinois at Urbana-Champaign. We draw students, speakers, and companies from across the US and the world. Join us and listen to tech talks from across the industry, to participate in an AI programming competition in Mechmania, to solve puzzles throughout the conference during PuzzleBang!, and to attend our job and startup fairs.
-            </p>
+<!--
 
-            <p>
-                The conference is free and open to anyone regardless of age, major, job, or affiliation with University of Illinois. So come join a discussion led by some of the brightest minds in the business about the bleeding edge of the tech industry!
-            </p>
+                   ____                      ,
+          /---.'.__             ____//
+               '--.\           /.---'
+          _______  \\         //
+        /.------.\  \|      .'/  ______
+       //  ___  \ \ ||/|\  //  _/_----.\__
+      |/  /.-.\  \ \:|< >|// _/.'..\   '--'
+         //   \'. | \'.|.'/ /_/ /  \\
+        //     \ \_\/" ' ~\-'.-'    \\
+       //       '-._| :H: |'-.__     \\
+      //           (/'==='\)'-._\     ||
+      ||                        \\    \|
+      ||                         \\    '
+      |/                          \\
+                                   ||
+                                   ||
+                                   \\
+                                    ' -->
 
-            <div>Previous Years: 
-                <a href="https://www-s.acm.illinois.edu/conference/2014/">2014</a> | <a href="https://www-s.acm.illinois.edu/conference/2013/">2013</a> | <a href="https://www-s.acm.illinois.edu/conference/2012/">2012</a>
+        <section data-section="faq" class="faq">
+            <div class="content right">
+                <h3>Frequently Asked Questions</h3>
+
+                <h4>General</h4>
+                <hr>
+                <div class="questions">
+                    <div>
+                        <h5>Do I need to register?</h5>
+                        <p>Nope! But registering is the only way you'll be guaranteed a tshirt. Click <a href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945">here</a> to register.</p>
+                    </div>
+                    <div>
+                        <h5>Do I need to register for MechMania??</h5>
+                        <p>Yes! Click <a href="https://www.eventbrite.com/e/reflections-projections-tickets-18504662945">here</a> to register for MechMania.</p>
+                    </div>
+                    <div>
+                        <h5>Is the conference free?</h5>
+                        <p>Yes! Reflections | Projections is completely free! This includes MechMania and other events.</p>
+                    </div>
+                    <div>
+                        <h5>Will food be provided?</h5>
+                        <p>All food at the conference will be free the entire weekend.</p>
+                    </div>
+                     <div>
+                        <h5>What's the difference between Tech Talks and Speaker Talks?</h5>
+                        <p>Tech Talks are given by our diamond level sponsors during lunch and dinner meals. 
+                        Speaker Talks are on specific technical or personal topics.</p>
+                    </div>
+                    <div>
+                        <h5>What's the difference between the Startup Fair and the Career Fair?</h5>
+                        <p>The Startup Fair is for startup companies, and the Career Fair is for established companies. 
+                        <br><br>
+                        The difference between startup and established companies is determined by conference staff.</p>
+                    </div>
+                    <div>
+                        <h5>I want to volunteer! How do I get involved?</h5>
+                        <p>Please join our <a href="https://www.facebook.com/events/492882687555386/">Facebook event</a>.</p>
+                    </div>
+                    <div>
+                        <h5>I'm a company! I have questions!</h5>
+                        <p>Please email us at <a href="mailto:corporate@acm.illinois.edu">corporate@acm.illinois.edu</a>.</p>
+                    </div>
+
+
+                </div>
+
+                <h4>Travel</h4>
+                <hr>
+                <p class="address">Reflections | Projections is held in the Siebel Center for Computer Science at the University of Illinois in Urbana-Champaign<a target="_blank" href="https://www.google.com/maps/place/401+S+Goodwin+Ave,+Urbana,+IL+61801">401 S Goodwin Ave, Urbana, IL</a><p>
+
+                <div class="questions">
+                    <div>
+                        <h5>Coming from Willard Airport</h5>
+                        <p>Willard Airport is located nouth of UIUC. If driving, head north from the airport on the 45 and turn right onto Springfield - you'll soon find yourself on UIUC campus! Alternatively, you can catch a cab from the airport to the building or the 27N/270N Airbus will take you from Willard to the corner of Goodwin St and Clark St just outside the building.</p>
+                    </div>
+                    <div>
+                        <h5>Coming from Amtrak Station</h5>
+                        <p>Siebel Center is located 1 mile from the Champaign Amtrak Station. Most buses will take you to campus with the 100S and 120E running every few minutes. Ride one of these buses to the intersection of Wright St and White St, then walk east on Stoughton and you will find yourself at the Siebel Center!</p>
+                    </div>
+                    <div>
+                        <h5>Getting around Campus</h5>
+                        <p>Most amenities are available within walking distance of the Siebel Center. However, if walking isn't for you then the Champaign-Urbana's public transit system, can take you where you need to go. Routes can be mapped using Google Maps or the CUMTD app and each ride will cost you $1. No change is given on the buses, so bring exact fare with you!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section data-section="sponsors" class="sponsors">
+            <div class="content">
+                <h3>Conference Sponsors</h3>
+                <div class="sponsors">
+                    <img src="img/SponsorLogos/godaddy.png">
+                <div>
+                <div class="sponsors">
+                    <img src="img/SponsorLogos/palantir.png">
+                <div> 
+                <div class="sponsors">
+                    <img src="img/SponsorLogos/microsoft.png">
+                <div>   
+        </section>
+
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="js/lightslider.min.js"></script>
+        <script src="js/typed.min.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/title.js"></script>
     </body>
 </html>
