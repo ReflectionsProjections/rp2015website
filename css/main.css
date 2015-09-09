@@ -133,7 +133,7 @@
  */
 html, body {
   font-family: 'Lora', serif;
-  background: url(../img/dot.png); }
+  background: url(../img/dot.png) fixed; }
 
 svg {
   position: fixed;
@@ -546,12 +546,10 @@ section.faq p {
     top: 60px; }
 
   section {
-    padding: 10px 10px 0px; }
+    padding: 10px 10px 10px; }
     section .content {
       margin: 0;
       max-width: 100% !important; }
-    section:last-of-type {
-      padding-bottom: 10px; }
 
   section.home {
     padding: 260px 20px 0; }

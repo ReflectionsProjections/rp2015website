@@ -11,7 +11,7 @@ $muted-red:   #d68f8f;
 
 html, body {
 	font-family: 'Lora', serif;
-	background: url(../img/dot.png);
+	background: url(../img/dot.png) fixed;
 }
 
 svg {
@@ -499,15 +499,11 @@ section.faq {
 	}
 
 	section {
-		padding: 10px 10px 0px;
+		padding: 10px 10px 10px;
 
 		.content {
 			margin: 0;
 			max-width: 100% !important;
-		}
-
-		&:last-of-type {
-			padding-bottom: 10px;
 		}
 	}
 
