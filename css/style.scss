@@ -423,8 +423,13 @@ section.sponsors {
 		padding: 50px 40px 30px;
 		max-width: 700px;
 	}
+
+	h3 {
+		margin-bottom: 50px;
+	}
+
 	img {
-		height: 50px;
+		@include col(1/2, $cycle: 2);
 	}
 }
 
