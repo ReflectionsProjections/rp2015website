@@ -427,8 +427,7 @@ section.schedule li:last-child {
 section.faq .content {
   *zoom: 1;
   padding: 50px 40px 30px;
-  max-width: 650px;
-  margin-left: auto; }
+  max-width: 650px; }
   section.faq .content:before, section.faq .content:after {
     content: '';
     display: table; }

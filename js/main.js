@@ -15,6 +15,8 @@ $('nav a').click(function() {
 	$('html, body').animate({scrollTop: top}, 500);
 });
 
+// var $sections = $('body > section');
+
 $(window).scroll(function() {
 	var windscroll = $(window).scrollTop();
 
@@ -26,7 +28,7 @@ $(window).scroll(function() {
             $('nav li a[data-anchor="' + section + '"]').parent().addClass('active');
         }
     });
-}).scroll();
+});
 
 $('.learn-more a').click(function() {
 	slider.goToSlide($(this).attr('data-number'));
