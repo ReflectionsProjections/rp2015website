@@ -429,7 +429,31 @@ section.sponsors {
 	}
 
 	img {
-		@include col(1/2, $cycle: 2);
+		@include col(1/2, $cycle: 2, $gutter: 10);
+	}
+}
+
+.footer {
+	padding-left: 10px;
+	padding-bottom: 10px;
+
+	a {
+		position: relative;
+		z-index: 50;
+
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: 400;
+		font-size: .9em;
+
+		cursor: pointer;
+
+		transition: color .1s;
+
+		&:hover {
+			color: $red;
+		}
 	}
 }
 

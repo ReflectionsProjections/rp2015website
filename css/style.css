@@ -496,9 +496,9 @@ section.sponsors img {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 48.5%;
+  width: 45%;
   margin-left: 0%;
-  margin-right: 3%; }
+  margin-right: 10%; }
   section.sponsors img:before, section.sponsors img:after {
     content: '';
     display: table; }
@@ -509,6 +509,22 @@ section.sponsors img {
     float: right; }
   section.sponsors img:nth-of-type(2n + 1) {
     clear: both; }
+
+.footer {
+  padding-left: 10px;
+  padding-bottom: 10px; }
+  .footer a {
+    position: relative;
+    z-index: 50;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+    cursor: pointer;
+    transition: color .1s; }
+    .footer a:hover {
+      color: #d04040; }
 
 /* taken from Matt Boldt's 'Typed.js' */
 .typed-cursor {
