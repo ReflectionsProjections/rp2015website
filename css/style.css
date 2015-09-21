@@ -600,6 +600,9 @@ section.sponsors img {
   section.about .links hr {
     margin-top: 4px; } }
 @media only screen and (max-width: 600px) {
+  svg {
+    display: none; }
+
   section.home h2 {
     font-size: 2.5em; }
 
