@@ -15,8 +15,6 @@ $('nav a').click(function() {
 	$('html, body').animate({scrollTop: top}, 500);
 });
 
-// var $sections = $('body > section');
-
 $(window).scroll(function() {
 	var windscroll = $(window).scrollTop();
 
@@ -24,8 +22,8 @@ $(window).scroll(function() {
         if ($(this).position().top <= windscroll) {
         	var section = $(this).attr('data-section');
 
-            $('nav li.active').removeClass('active');
-            $('nav li a[data-anchor="' + section + '"]').parent().addClass('active');
+            $('#desktop-nav li.active').removeClass('active');
+            $('#desktop-nav li a[data-anchor="' + section + '"]').parent().addClass('active');
         }
     });
 });

@@ -304,6 +304,7 @@ section.speakers {
 
 	figure {
 		@include col(1/3, $cycle: 3, $gutter: 2);
+		overflow: hidden;
 	}
 
 	img {
@@ -566,7 +567,7 @@ section.sponsors {
 
 	section.home {
 		h2 {
-			font-size: 2.5em;
+			font-size: 2.3em;
 		}
 	}
 
