@@ -9,7 +9,7 @@ $('nav a').click(function() {
 	$(this).parent().addClass('active');
 
 	var section = $(this).attr('data-anchor'),
-		top = $('section[data-section="' + section + '"]').offset().top + 50;	
+		top = $('section[data-section="' + section + '"]').offset().top + 50;
 
 	if (section == 'home') top = 0;
 	$('html, body').animate({scrollTop: top}, 500);
@@ -34,6 +34,18 @@ $('.learn-more a').click(function() {
 	$(this).addClass('active');
 });
 
+var flag = false;
+$('.speaker-button').bind("click touchstart", function(){
+    if(!flag){
+        flag = true;
+        setTimeout(function(){flag = false;}, 100);
+        $('.speaker-info').hide();
+        data_num = $(this).attr('data-number');
+        $('.speaker-info[data-number="'+data_num+'"]').show();
+    }
+    return false;
+});
+
 var $word = $('.title-text span:first-child');
 
 $('#typed').typed({
@@ -53,7 +65,7 @@ $('#typed').typed({
 		"competing in Mechmania",
 	/*       ___
 		///\(o_o)/\\\
-		|||  ` '  |||     */ 
+		|||  ` '  |||     */
 		"INFESTED WITH SPIDERS PLEASE SEND HELP",
 		"open to everyone",
 		"more than just a conference",
@@ -90,7 +102,7 @@ function Icosahedron(scale,velocityX,velocityY) {
 		  .attr("class", "isoco1")
 	    .attr("width", this.width)
 	    .attr("height", this.height);
-	 
+
 
 	this.face = this.svg.selectAll("path")
 		.data(icosahedronFaces)
@@ -113,8 +125,8 @@ function Icosahedron(scale,velocityX,velocityY) {
 		return faces;
 	};
 
-	};	
-	
+	};
+
 Icosahedron.prototype.redraw = function() {
 		var time = Date.now() - this.t0;
 		var projection = this.projection;
@@ -128,7 +140,7 @@ Icosahedron.prototype.redraw = function() {
 
 function init() {
 	d3.selectAll("svg").remove();
-	
+
 	var i1 = new Icosahedron(2,.014,.01);
 	var i2 = new Icosahedron(2.5,.02,-.02);
 	var i3 = new Icosahedron(3,-.01,.014);
