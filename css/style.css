@@ -534,6 +534,10 @@ section.sponsors img {
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
 
+.speaker-button{
+    cursor:pointer;
+}
+
 @keyframes blink {
   0% {
     opacity: 1; }
