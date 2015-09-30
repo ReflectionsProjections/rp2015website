@@ -45,13 +45,22 @@ $('.learn-more a').click(function() {
 });
 
 var flag = false;
+var open = -1;
 $('.speaker-button').bind("click touchstart", function(){
     if(!flag){
         flag = true;
         setTimeout(function(){flag = false;}, 100);
-        $('.speaker-info').hide();
+        $('.speaker-info').slideUp(300);
+
         data_num = $(this).attr('data-number');
-        $('.speaker-info[data-number="'+data_num+'"]').show();
+        var bio = $('.speaker-info[data-number="'+data_num+'"]');
+
+        if (open != data_num) {
+	        $('.speaker-info[data-number="'+data_num+'"]').slideDown(300);
+	        open = data_num;
+	    } else {
+	    	open = -1;
+	    }
     }
     return false;
 });

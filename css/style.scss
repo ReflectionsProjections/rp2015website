@@ -293,6 +293,9 @@ section.about {
 		text-align: center;
 	}
 
+	.about-slider a {
+		padding-left: 0;
+	}
 }
 
 section.speakers {
@@ -309,12 +312,17 @@ section.speakers {
 
 	img {
 		width: 100%;
+		cursor: pointer;
 	}
 
 	h4 {
 		font-family: 'Lora';
 		font-weight: normal;
 		margin: 4px 0 0;
+		color: $dark-grey;
+	}
+
+	.speaker-info {
 		color: $dark-grey;
 	}
 }

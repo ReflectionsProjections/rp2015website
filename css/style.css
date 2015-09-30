@@ -342,6 +342,8 @@ section.about {
   section.about .center {
     display: block;
     text-align: center; }
+  section.about .about-slider a {
+    padding-left: 0; }
 
 section.speakers .content {
   *zoom: 1;
@@ -372,11 +374,14 @@ section.speakers figure {
   section.speakers figure:nth-of-type(3n + 1) {
     clear: both; }
 section.speakers img {
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 section.speakers h4 {
   font-family: 'Lora';
   font-weight: normal;
   margin: 4px 0 0;
+  color: #514e4e; }
+section.speakers .speaker-info {
   color: #514e4e; }
 
 section.schedule .content {
@@ -533,10 +538,6 @@ section.sponsors img {
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
-
-.speaker-button{
-    cursor:pointer;
-}
 
 @keyframes blink {
   0% {
