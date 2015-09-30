@@ -15,10 +15,20 @@ $('nav a').click(function() {
 	$('html, body').animate({scrollTop: top}, 500);
 });
 
-$(window).scroll(function() {
+var $sections = $('body > section');
+var scrollTimer = null;
+
+$(window).scroll(function () {
+    if (scrollTimer) {
+        clearTimeout(scrollTimer);   // clear any previous pending timer
+    }
+    scrollTimer = setTimeout(handleScroll, 20);   // set new timer
+});
+
+function handleScroll() {
 	var windscroll = $(window).scrollTop();
 
-    $('body > section').each(function(i) {
+    $sections.each(function(i) {
         if ($(this).position().top <= windscroll) {
         	var section = $(this).attr('data-section');
 
@@ -26,7 +36,7 @@ $(window).scroll(function() {
             $('#desktop-nav li a[data-anchor="' + section + '"]').parent().addClass('active');
         }
     });
-});
+}
 
 $('.learn-more a').click(function() {
 	slider.goToSlide($(this).attr('data-number'));
@@ -78,7 +88,6 @@ function Icosahedron(scale,velocityX,velocityY) {
 	this.width = window.innerWidth;
 	this.height = window.innerHeight;
 	this.t0 = Date.now();
-	console.log(this.width);
 	var projection = d3.geo.orthographic()
 	    .scale(this.height/scale)
 	    .translate([this.width/2, this.height/2])
