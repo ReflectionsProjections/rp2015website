@@ -425,7 +425,6 @@ section.schedule li {
     color: #a5a5a5;
     width: 50px; }
   section.schedule li span {
-    display: none;
     float: right; }
 section.schedule li:last-child {
   border: none; }
