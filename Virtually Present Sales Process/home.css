@@ -1,0 +1,71 @@
+html {
+	background-color: rgb(90,90,90);
+}
+
+body {
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+
+.main {
+	color: rgb(150,0,0);
+	background-color: rgba(255,255,255,0.6);
+	text-align: center;
+	font-size: 3em;
+	border: 1px solid;
+	border-color: black;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cover {
+	font-weight: bold;
+	padding: 0px;
+	padding-top: 5px;
+	margin: 0px;
+}
+
+#container {
+	float: right;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+
+#menu {
+	float: left;
+	width: 200px;
+	height: 500px;
+	background-color: rgb(80,0,0);
+	overflow-y: scroll;
+	border: 2px solid;
+	border-color: rgb(150,0,0);
+	margin-left: 10px;
+}
+
+#chat {
+	width: 20%px;
+	height: 500px;
+	background-color: #ffffff;
+	overflow-y: scroll;
+	border: 1px solid;
+	border-color: rgb(255,0,0);
+}
+
+#item {
+	border: 1px solid;
+	border-color: white;
+	color: white;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+}
